@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --bg:#071016;
+  --surface:#0d1920;
+  --surface-2:#11232b;
+  --text:#eef7f5;
+  --muted:#9db0b5;
+  --line:#20363e;
+  --accent:#63e6be;
+  --accent-2:#8aa7ff;
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(7,16,22,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:25px;font-weight:800;letter-spacing:-1px}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;gap:28px;color:var(--muted);font-size:14px;font-weight:700}
+.nav-links a{transition:.2s}
+.nav-links a:hover{color:var(--text)}
+.menu-toggle{display:none;background:none;border:0;color:var(--text);font-size:24px}
+.hero{padding:110px 0 85px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.eyebrow{font-family:"DM Mono",monospace;font-size:12px;letter-spacing:2px;color:var(--accent);margin-bottom:16px}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-3px;max-width:760px}
+h2{font-size:clamp(30px,4vw,48px);line-height:1.12;letter-spacing:-1.8px}
+.hero-text{color:var(--muted);font-size:17px;max-width:680px;margin:25px 0 30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:10px;padding:12px 18px;font-weight:800;font-size:14px;cursor:pointer;transition:.2s}
+.btn.primary{background:var(--accent);color:#06120f;border-color:var(--accent)}
+.btn.primary:hover{transform:translateY(-2px)}
+.btn.secondary{background:transparent;color:var(--text)}
+.btn.secondary:hover{background:var(--surface-2)}
+.quick-stats{display:flex;gap:34px;margin-top:55px;flex-wrap:wrap}
+.quick-stats div{display:flex;flex-direction:column}
+.quick-stats strong{font-size:16px}
+.quick-stats span{color:var(--muted);font-size:12px;margin-top:2px}
+.hero-card{position:relative}
+.code-window{background:#09131a;border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.3);overflow:hidden}
+.window-bar{height:44px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 16px}
+.window-bar span{width:9px;height:9px;border-radius:50%;background:#36505a}
+pre{padding:28px;overflow:auto;font:13px/2 "DM Mono",monospace;color:#d9e7e5}
+.purple{color:#c8a7ff}.green{color:var(--accent)}
+.section{padding:105px 0}
+.alt{background:var(--surface)}
+.two-col{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px}
+.section-copy{color:var(--muted);font-size:16px}
+.section-copy p+p{margin-top:18px}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.skill-card{padding:28px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.015);transition:.25s}
+.skill-card:hover{transform:translateY(-4px);border-color:#31515c}
+.skill-card span,.project-number{font:12px "DM Mono",monospace;color:var(--accent)}
+.skill-card h3{margin:18px 0 8px;font-size:18px}
+.skill-card p,.project-card p{color:var(--muted);font-size:14px}
+.section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px}
+.muted{color:var(--muted);font-size:14px;max-width:340px}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px}
+.project-card{padding:30px;border:1px solid var(--line);border-radius:14px;display:flex;gap:22px;background:rgba(255,255,255,.01);transition:.25s}
+.project-card:hover{transform:translateY(-4px);border-color:#31515c}
+.project-number{min-width:30px;padding-top:3px}
+.project-card h3{font-size:21px;margin:5px 0 10px}
+.tag{font:11px "DM Mono",monospace;color:var(--accent)!important;letter-spacing:1px}
+.tech{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}
+.tech span{border:1px solid var(--line);border-radius:999px;padding:4px 9px;font:10px "DM Mono",monospace;color:#bdd0d3}
+.github-note{margin-top:16px;padding:27px 30px;border:1px solid var(--line);border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.github-note h3{margin-bottom:4px}.github-note p:last-child{color:var(--muted);font-size:13px}
+.timeline{margin-top:35px;border-top:1px solid var(--line)}
+.timeline-item{display:grid;grid-template-columns:170px 1fr;gap:30px;padding:28px 0;border-bottom:1px solid var(--line)}
+.year{font:12px "DM Mono",monospace;color:var(--accent)}
+.timeline-item h3{font-size:19px;margin-bottom:5px}.timeline-item p{color:var(--muted);font-size:14px}
+.contact-section{padding-top:70px}
+.contact-card{border:1px solid var(--line);background:var(--surface);border-radius:18px;padding:45px;display:flex;justify-content:space-between;gap:40px;align-items:center}
+.contact-card p:not(.eyebrow){color:var(--muted);max-width:600px;margin-top:15px}
+.contact-links{display:flex;flex-direction:column;align-items:flex-end;gap:12px;font-size:14px}
+.contact-links>a{color:var(--accent);font-weight:700}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px}
+.footer-inner{display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(16px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:800px){
+  .nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--bg);padding:18px 20px;border-bottom:1px solid var(--line);flex-direction:column;gap:14px}
+  .nav-links.open{display:flex}.menu-toggle{display:block}
+  .hero{padding-top:75px}.hero-grid,.two-col{grid-template-columns:1fr;gap:45px}
+  .skills-grid,.projects-grid{grid-template-columns:1fr}
+  .section-heading,.contact-card{align-items:flex-start;flex-direction:column}
+  .contact-links{align-items:flex-start}
+  .timeline-item{grid-template-columns:1fr;gap:8px}
+}
+@media(max-width:480px){
+  .container{width:min(calc(100% - 28px),var(--max))}
+  h1{letter-spacing:-2px}.quick-stats{gap:20px}.hero{padding-bottom:55px}
+  .section{padding:75px 0}.project-card,.github-note,.contact-card{padding:22px}
+  .footer-inner{flex-direction:column;gap:5px}
+}
